@@ -18,7 +18,7 @@ export default function Profile() {
   // User Profile Data Map
   const [profile, setProfile] = useState({
     name: '',
-    age: 25,
+    dob: '',
     isVerified: true,
     location: '',
     distance: '2',
@@ -45,6 +45,7 @@ export default function Profile() {
           setProfile({
             ...profile,
             name: data.firstName || data.name?.split(' ')[0] || '',
+            dob: data.dob ? data.dob.split('T')[0] : '',
             bio: data.bio || '',
             location: data.location || '',
             job: data.job || '',
@@ -104,6 +105,7 @@ export default function Profile() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           firstName: profile.name,
+          dob: profile.dob || undefined,
           bio: profile.bio,
           location: profile.location,
           job: profile.job,
@@ -275,7 +277,11 @@ export default function Profile() {
           ) : (
             <h1 className="text-[24px] font-bold text-[#1A1A1A] leading-none">{profile.name}</h1>
           )}
-          <span className="text-[24px] text-[#6B7280] leading-none">{profile.age}</span>
+          {isEditing ? (
+            <input type="date" value={profile.dob} className="text-[16px] text-[#6B7280] border-b border-[#E0E0E0] focus:outline-none focus:border-[#FFC629] bg-transparent" onChange={e=>setProfile({...profile, dob: e.target.value})} />
+          ) : (
+            <span className="text-[24px] text-[#6B7280] leading-none">{profile.dob ? Math.floor((Date.now() - new Date(profile.dob)) / (365.25 * 24 * 60 * 60 * 1000)) : ''}</span>
+          )}
           {profile.isVerified && <CheckCircle size={20} className="text-[#FFC629] fill-[#FFC629] ml-1" />}
         </div>
         

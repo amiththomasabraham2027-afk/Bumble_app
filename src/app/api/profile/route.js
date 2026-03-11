@@ -15,7 +15,7 @@ export async function PUT(req) {
 
     // Prevent users from changing restricted fields arbitrarily
     const allowedUpdates = {};
-    const updatableFields = ['firstName', 'bio', 'gender', 'location', 'interests', 'job', 'school', 'imageUrls'];
+    const updatableFields = ['firstName', 'dob', 'bio', 'gender', 'location', 'interests', 'job', 'school', 'imageUrls'];
     
     Object.keys(updates).forEach((key) => {
         if (updatableFields.includes(key)) {
