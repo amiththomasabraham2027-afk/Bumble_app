@@ -1,0 +1,125 @@
+name: Build, Push & Deploy to AWS EC2
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # allow manual trigger from GitHub UI
+
+env:
+  AWS_REGION: ${{ secrets.AWS_REGION }}
+  ECR_REPO: ${{ secrets.ECR_REPO }}
+
+jobs:
+  # ─────────────────────────────────────────────
+  # JOB 1: Build image and push to Amazon ECR
+  # ─────────────────────────────────────────────
+  build-and-push:
+    name: Build & Push to ECR
+    runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.build.outputs.image }}
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      # ── AWS credentials ──────────────────────
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # ── Login to ECR ─────────────────────────
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      # ── Docker layer cache (speeds up builds) ─
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # ── Build, tag, push ─────────────────────
+      - name: Build, tag & push image
+        id: build
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build \
+            --cache-from type=registry,ref=$ECR_REGISTRY/$ECR_REPO:cache \
+            --cache-to   type=registry,ref=$ECR_REGISTRY/$ECR_REPO:cache,mode=max \
+            --tag $ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG \
+            --tag $ECR_REGISTRY/$ECR_REPO:latest \
+            --push \
+            .
+          echo "image=$ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG" >> "$GITHUB_OUTPUT"
+
+      # ── ECR image scan (security) ─────────────
+      - name: Wait for ECR image scan
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          echo "Waiting for scan to complete..."
+          aws ecr wait image-scan-complete \
+            --repository-name $ECR_REPO \
+            --image-id imageTag=$IMAGE_TAG \
+            --region $AWS_REGION || true
+
+          FINDINGS=$(aws ecr describe-image-scan-findings \
+            --repository-name $ECR_REPO \
+            --image-id imageTag=$IMAGE_TAG \
+            --region $AWS_REGION \
+            --query 'imageScanFindings.findingSeverityCounts' \
+            --output json 2>/dev/null || echo '{}')
+
+          echo "Scan findings: $FINDINGS"
+
+          CRITICAL=$(echo "$FINDINGS" | jq '.CRITICAL // 0')
+          if [ "$CRITICAL" -gt 0 ]; then
+            echo "::error::Image has $CRITICAL CRITICAL vulnerabilities. Blocking deploy."
+            exit 1
+          fi
+
+  # ─────────────────────────────────────────────
+  # JOB 2: SSH into EC2 and deploy the new image
+  # ─────────────────────────────────────────────
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
+    needs: build-and-push
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          envs: IMAGE
+          script: |
+            IMAGE="${{ needs.build-and-push.outputs.image }}"
+
+            # ── authenticate Docker with ECR ─────
+            aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | \
+              docker login --username AWS --password-stdin \
+              $(echo "$IMAGE" | cut -d/ -f1)
+
+            # ── pull new image ───────────────────
+            docker pull "$IMAGE"
+
+            # ── zero-downtime swap ───────────────
+            docker stop app 2>/dev/null || true
+            docker rm   app 2>/dev/null || true
+
+            docker run -d \
+              --name app \
+              --restart always \
+              -p 3000:3000 \
+              --env-file /etc/app/.env \
+              "$IMAGE"
+
+            # ── clean up old images ──────────────
+            docker image prune -f
