@@ -18,10 +18,6 @@ export async function GET() {
        return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
-    // Determine target gender for matching based on current user's gender
-    // Assuming heterosexual matching for MV
-    const targetGender = currentUser.gender === 'Woman' ? 'Man' : 'Woman';
-
     // Users to exclude: current user + already swiped (liked or passed)
     const excludeIds = [
       currentUser._id,
@@ -30,19 +26,12 @@ export async function GET() {
       ...(currentUser.matches || []) // Already matched users
     ];
 
-    // Build the query
+    // Build the query — show all users except self and already-swiped
     const query = {
       _id: { $nin: excludeIds },
-      gender: targetGender,
-      isActive: true,
-      isAllowed: true
+      isActive: { $ne: false },
+      isAllowed: { $ne: false },
     };
-
-    // Note: If currentUser.gender is undefined/unspecified (brand new Google account), 
-    // we just fetch everyone for now until they finish onboarding
-    if (!currentUser.gender || currentUser.gender === 'unspecified') {
-       delete query.gender;
-    }
 
     // Limit to 20 profiles at a time for the deck
     const potentialMatches = await User.find(query).limit(20);
