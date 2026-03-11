@@ -1,0 +1,435 @@
+2026-03-11T05:26:45.905Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T05:26:45.907Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T05:26:45.908Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","iat":1773206664,"exp":1775798664,"jti":"ccf979a7-4186-4c27-9cfb-754ce0d31da4"}
+2026-03-11T05:27:39.286Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T05:27:39.286Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T05:27:39.288Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","iat":1773206806,"exp":1775798806,"jti":"f018c9e2-53c3-46b1-bba5-1c3e09edc62e"}
+2026-03-11T05:28:49.381Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T05:28:49.381Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T05:28:49.382Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","iat":1773206859,"exp":1775798859,"jti":"db8a8988-1cfb-4a5e-9f47-78237b9db2e0"}
+2026-03-11T05:29:00.266Z: SignIn triggered for provider: google. Email: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:29:00.267Z: DB Connected.
+2026-03-11T05:29:00.365Z: Existing User found? true
+2026-03-11T05:29:00.366Z: SignIn returning true.
+2026-03-11T05:29:00.368Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: true
+2026-03-11T05:29:01.422Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:29:01.423Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:29:01.423Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773206940,"exp":1775798940,"jti":"eadadb7c-c0d1-4359-91ff-fcb8081e1755"}
+2026-03-11T05:45:21.229Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:45:21.231Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:45:24.704Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773206941,"exp":1775798941,"jti":"e8571728-3957-4945-9ddc-7976ef006191"}
+2026-03-11T05:45:25.761Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:45:25.763Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:45:25.764Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773206941,"exp":1775798941,"jti":"e8571728-3957-4945-9ddc-7976ef006191"}
+2026-03-11T05:45:32.930Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:45:32.931Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:45:32.932Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773207925,"exp":1775799925,"jti":"cdac5304-1416-443b-a3f7-2af472a9a305"}
+2026-03-11T05:45:33.099Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:45:33.100Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:45:33.101Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773207933,"exp":1775799933,"jti":"818623de-9d9b-4f46-b20a-d602970108b2"}
+2026-03-11T05:45:58.960Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:45:58.962Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:45:58.962Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773207933,"exp":1775799933,"jti":"ed921793-b43e-4803-b300-dd06f2aedffd"}
+2026-03-11T05:45:59.211Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:45:59.212Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:45:59.213Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773207959,"exp":1775799959,"jti":"ebbf6feb-0947-4c8c-b753-1ce63766d298"}
+2026-03-11T05:52:41.734Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:52:41.737Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:52:44.982Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:52:44.984Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:52:45.435Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773207959,"exp":1775799959,"jti":"38263693-6953-4225-9993-e878fa3af0b4"}
+2026-03-11T05:52:45.439Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773207959,"exp":1775799959,"jti":"38263693-6953-4225-9993-e878fa3af0b4"}
+2026-03-11T05:52:46.251Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:52:46.252Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:52:46.252Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773207959,"exp":1775799959,"jti":"38263693-6953-4225-9993-e878fa3af0b4"}
+2026-03-11T05:52:46.369Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:52:46.370Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:52:46.370Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773208366,"exp":1775800366,"jti":"5fdeb376-e7a0-42aa-925f-cbcd176c00cc"}
+2026-03-11T05:52:49.924Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:52:49.925Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:52:49.926Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773208366,"exp":1775800366,"jti":"e785f0f8-9ab6-4f51-81a7-774b0c69beba"}
+2026-03-11T05:52:50.079Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T05:52:50.080Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T05:52:50.081Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773208370,"exp":1775800370,"jti":"6c3990a1-6455-46b6-b33c-af668192c280"}
+2026-03-11T06:07:02.913Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:07:02.915Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:07:02.918Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773208370,"exp":1775800370,"jti":"bc931853-360c-4e55-84fd-3568e4ec65ab"}
+2026-03-11T06:07:05.936Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:07:05.939Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:07:05.941Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209223,"exp":1775801223,"jti":"ab96718e-177d-413e-9e2c-8d3a9e49670f"}
+2026-03-11T06:07:06.233Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:07:06.236Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:07:06.238Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209223,"exp":1775801223,"jti":"ab96718e-177d-413e-9e2c-8d3a9e49670f"}
+2026-03-11T06:10:31.729Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:10:31.733Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:10:31.801Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:10:31.802Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:10:35.415Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209223,"exp":1775801223,"jti":"ab96718e-177d-413e-9e2c-8d3a9e49670f"}
+2026-03-11T06:10:35.424Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209223,"exp":1775801223,"jti":"ab96718e-177d-413e-9e2c-8d3a9e49670f"}
+2026-03-11T06:10:36.488Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:10:36.488Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:10:36.489Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209436,"exp":1775801436,"jti":"6e3a9f65-3d43-4136-b25d-8d095b12a1a4"}
+2026-03-11T06:10:59.967Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:10:59.969Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:10:59.971Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209436,"exp":1775801436,"jti":"6e3a9f65-3d43-4136-b25d-8d095b12a1a4"}
+2026-03-11T06:11:00.363Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:11:00.364Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:11:00.369Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209436,"exp":1775801436,"jti":"6e3a9f65-3d43-4136-b25d-8d095b12a1a4"}
+2026-03-11T06:12:14.435Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:14.436Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:14.437Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209436,"exp":1775801436,"jti":"6e3a9f65-3d43-4136-b25d-8d095b12a1a4"}
+2026-03-11T06:12:14.794Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:14.795Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:14.796Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209436,"exp":1775801436,"jti":"6e3a9f65-3d43-4136-b25d-8d095b12a1a4"}
+2026-03-11T06:12:17.131Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:17.133Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:17.134Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209436,"exp":1775801436,"jti":"6e3a9f65-3d43-4136-b25d-8d095b12a1a4"}
+2026-03-11T06:12:17.704Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:17.705Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:17.706Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209436,"exp":1775801436,"jti":"6e3a9f65-3d43-4136-b25d-8d095b12a1a4"}
+2026-03-11T06:12:17.878Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:17.879Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:17.880Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209537,"exp":1775801537,"jti":"81906cb1-684b-4a58-b06d-70a4734c67ad"}
+2026-03-11T06:12:19.982Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:19.983Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:19.983Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209537,"exp":1775801537,"jti":"81906cb1-684b-4a58-b06d-70a4734c67ad"}
+2026-03-11T06:12:20.122Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:20.122Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:20.123Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:12:30.975Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:30.976Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:30.977Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:12:31.299Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:31.302Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:31.304Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:12:37.103Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:37.104Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:37.105Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:12:37.610Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:37.613Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:37.614Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:12:43.276Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:43.278Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:43.279Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:12:43.766Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:12:43.771Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:12:43.775Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:13:04.038Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:13:04.040Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:13:04.041Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:13:04.556Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:13:04.556Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:13:04.557Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:13:26.321Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:13:26.322Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:13:26.323Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209540,"exp":1775801540,"jti":"7dcbc40b-957a-4437-8a48-fdf049d77bd2"}
+2026-03-11T06:13:26.502Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:13:26.503Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:13:26.503Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209606,"exp":1775801606,"jti":"d9085cd9-9b9f-499b-bb4c-d5ff2ec1fa86"}
+2026-03-11T06:14:19.412Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:14:19.412Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:14:19.413Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209606,"exp":1775801606,"jti":"d9085cd9-9b9f-499b-bb4c-d5ff2ec1fa86"}
+2026-03-11T06:14:19.608Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:14:19.609Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:14:19.609Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209659,"exp":1775801659,"jti":"228443a9-7acb-45ac-bf23-15d485f275bd"}
+2026-03-11T06:14:33.552Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:14:33.555Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:14:33.558Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209659,"exp":1775801659,"jti":"228443a9-7acb-45ac-bf23-15d485f275bd"}
+2026-03-11T06:14:33.817Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:14:33.818Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:14:33.819Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209659,"exp":1775801659,"jti":"228443a9-7acb-45ac-bf23-15d485f275bd"}
+2026-03-11T06:14:35.047Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:14:35.048Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:14:35.049Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209659,"exp":1775801659,"jti":"228443a9-7acb-45ac-bf23-15d485f275bd"}
+2026-03-11T06:14:35.473Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:14:35.475Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:14:35.477Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209659,"exp":1775801659,"jti":"228443a9-7acb-45ac-bf23-15d485f275bd"}
+2026-03-11T06:16:08.386Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:16:08.387Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:16:08.388Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209659,"exp":1775801659,"jti":"228443a9-7acb-45ac-bf23-15d485f275bd"}
+2026-03-11T06:16:08.587Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:16:08.588Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:16:08.589Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209768,"exp":1775801768,"jti":"d91ec2c3-4f5c-4660-ab49-142a107660c2"}
+2026-03-11T06:20:16.633Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:16.634Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:16.635Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773209768,"exp":1775801768,"jti":"d91ec2c3-4f5c-4660-ab49-142a107660c2"}
+2026-03-11T06:20:16.849Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:16.850Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:16.851Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210016,"exp":1775802016,"jti":"249923cf-4335-404e-9c73-5484390e4914"}
+2026-03-11T06:20:18.640Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:18.641Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:18.642Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210016,"exp":1775802016,"jti":"249923cf-4335-404e-9c73-5484390e4914"}
+2026-03-11T06:20:18.876Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:18.877Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:18.878Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210016,"exp":1775802016,"jti":"249923cf-4335-404e-9c73-5484390e4914"}
+2026-03-11T06:20:24.530Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:24.531Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:24.532Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210016,"exp":1775802016,"jti":"249923cf-4335-404e-9c73-5484390e4914"}
+2026-03-11T06:20:24.672Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:24.673Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:24.674Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210024,"exp":1775802024,"jti":"fd2818d1-b5bc-41b3-b6b0-ec7230ff2d07"}
+2026-03-11T06:20:46.966Z: SignIn triggered for provider: google. Email: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:46.968Z: DB Connected.
+2026-03-11T06:20:47.080Z: Existing User found? true
+2026-03-11T06:20:47.082Z: SignIn returning true.
+2026-03-11T06:20:47.086Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: true
+2026-03-11T06:20:48.415Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:48.416Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:48.416Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210047,"exp":1775802047,"jti":"58994f89-e52c-472a-9747-fa5db9494945"}
+2026-03-11T06:20:48.603Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:48.604Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:48.605Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210048,"exp":1775802048,"jti":"3a8ae887-c89b-47fe-ba9a-46dc999645aa"}
+2026-03-11T06:20:53.307Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:53.308Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:53.309Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210048,"exp":1775802048,"jti":"3a8ae887-c89b-47fe-ba9a-46dc999645aa"}
+2026-03-11T06:20:53.623Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:20:53.625Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:20:53.627Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210048,"exp":1775802048,"jti":"3a8ae887-c89b-47fe-ba9a-46dc999645aa"}
+2026-03-11T06:21:00.674Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:21:00.675Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:21:00.676Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210048,"exp":1775802048,"jti":"3a8ae887-c89b-47fe-ba9a-46dc999645aa"}
+2026-03-11T06:21:01.073Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:21:01.074Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:21:01.075Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210048,"exp":1775802048,"jti":"3a8ae887-c89b-47fe-ba9a-46dc999645aa"}
+2026-03-11T06:21:03.753Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:21:03.754Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:21:03.754Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210048,"exp":1775802048,"jti":"3a8ae887-c89b-47fe-ba9a-46dc999645aa"}
+2026-03-11T06:21:04.196Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:21:04.197Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:21:04.199Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210048,"exp":1775802048,"jti":"3a8ae887-c89b-47fe-ba9a-46dc999645aa"}
+2026-03-11T06:21:37.092Z: SignIn triggered for provider: google. Email: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:21:37.094Z: DB Connected.
+2026-03-11T06:21:37.191Z: Existing User found? true
+2026-03-11T06:21:37.193Z: SignIn returning true.
+2026-03-11T06:21:37.195Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: true
+2026-03-11T06:21:38.411Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:21:38.411Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:21:38.412Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210097,"exp":1775802097,"jti":"f59911e9-f1f7-4070-92e5-d57d7df36ef9"}
+2026-03-11T06:21:38.579Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:21:38.580Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:21:38.581Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210098,"exp":1775802098,"jti":"f8a04a20-e935-45c1-a3be-0a5fe13cfdf4"}
+2026-03-11T06:22:01.391Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:22:01.392Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:22:01.393Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210098,"exp":1775802098,"jti":"f8a04a20-e935-45c1-a3be-0a5fe13cfdf4"}
+2026-03-11T06:22:04.168Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:22:04.170Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:22:04.171Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210121,"exp":1775802121,"jti":"8bfca14f-a4c0-4a81-aa4f-abe85e6b34a0"}
+2026-03-11T06:22:04.369Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:22:04.370Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:22:04.371Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210124,"exp":1775802124,"jti":"74c307ba-8d2f-4766-af32-d39d837a08c1"}
+2026-03-11T06:22:21.320Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:22:21.323Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:22:21.326Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210124,"exp":1775802124,"jti":"74c307ba-8d2f-4766-af32-d39d837a08c1"}
+2026-03-11T06:22:21.724Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:22:21.730Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:22:21.733Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210124,"exp":1775802124,"jti":"74c307ba-8d2f-4766-af32-d39d837a08c1"}
+2026-03-11T06:22:44.785Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:22:44.786Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:22:44.787Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210124,"exp":1775802124,"jti":"74c307ba-8d2f-4766-af32-d39d837a08c1"}
+2026-03-11T06:22:44.991Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:22:44.992Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:22:44.993Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210164,"exp":1775802164,"jti":"fcd20f83-18ba-42fb-910a-164e0e680cce"}
+2026-03-11T06:23:25.268Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:23:25.269Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:23:25.269Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210164,"exp":1775802164,"jti":"fcd20f83-18ba-42fb-910a-164e0e680cce"}
+2026-03-11T06:23:25.454Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:23:25.455Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:23:25.456Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210205,"exp":1775802205,"jti":"46545731-7372-4725-ad0d-d343f1d85927"}
+2026-03-11T06:23:47.445Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:23:47.446Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:23:47.446Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210205,"exp":1775802205,"jti":"46545731-7372-4725-ad0d-d343f1d85927"}
+2026-03-11T06:23:47.597Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:23:47.598Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:23:47.598Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210227,"exp":1775802227,"jti":"70473e55-a85a-45c3-9d82-d9de86576e42"}
+2026-03-11T06:24:14.881Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:24:14.882Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:24:14.883Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210227,"exp":1775802227,"jti":"70473e55-a85a-45c3-9d82-d9de86576e42"}
+2026-03-11T06:24:15.038Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:24:15.038Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:24:15.039Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210254,"exp":1775802254,"jti":"632e2b9b-8d8e-41b0-8c3d-45ab3b4c154d"}
+2026-03-11T06:24:27.074Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:24:27.075Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:24:27.076Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210254,"exp":1775802254,"jti":"632e2b9b-8d8e-41b0-8c3d-45ab3b4c154d"}
+2026-03-11T06:28:38.973Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:28:38.974Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:28:38.974Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210254,"exp":1775802254,"jti":"632e2b9b-8d8e-41b0-8c3d-45ab3b4c154d"}
+2026-03-11T06:28:39.117Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:28:39.118Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:28:39.119Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:29:46.273Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:29:46.275Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:29:46.277Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:29:52.581Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:29:52.582Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:29:52.584Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:29:58.064Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:29:58.066Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:29:58.067Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:03.411Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:03.413Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:03.415Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:07.495Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:07.496Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:07.497Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:10.127Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:10.127Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:10.128Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:10.574Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:10.575Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:10.576Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:11.623Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:11.625Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:11.629Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:19.335Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:19.337Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:19.338Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:28.643Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:28.645Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:28.646Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:33.092Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:33.094Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:33.095Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:34.448Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:34.450Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:34.451Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:37.141Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:37.143Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:37.144Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:37.740Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:37.741Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:37.743Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:42.945Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:42.946Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:42.948Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:46.084Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:46.086Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:46.087Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:47.623Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:47.623Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:47.624Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210519,"exp":1775802519,"jti":"8833480d-47bc-4c42-8375-f0dae6614b96"}
+2026-03-11T06:30:50.183Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:50.184Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:50.184Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210647,"exp":1775802647,"jti":"881d436d-4cbf-43f4-b2fd-02b8f56620ee"}
+2026-03-11T06:30:50.906Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:30:50.907Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:30:50.908Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210650,"exp":1775802650,"jti":"5ad2819f-51fa-40c5-ae42-f9b1e25ab069"}
+2026-03-11T06:33:05.682Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:33:05.683Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:33:05.683Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210650,"exp":1775802650,"jti":"5ad2819f-51fa-40c5-ae42-f9b1e25ab069"}
+2026-03-11T06:33:06.330Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:33:06.330Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:33:06.331Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210786,"exp":1775802786,"jti":"f67854bb-2965-4994-8fc2-c9d5224266b6"}
+2026-03-11T06:35:09.401Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:35:09.402Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:35:09.403Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210786,"exp":1775802786,"jti":"f67854bb-2965-4994-8fc2-c9d5224266b6"}
+2026-03-11T06:35:10.101Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:35:10.103Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:35:10.104Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210909,"exp":1775802909,"jti":"431f9e42-0576-4843-b2f9-c9a12dd349b3"}
+2026-03-11T06:35:47.283Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:35:47.285Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:35:47.288Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210909,"exp":1775802909,"jti":"431f9e42-0576-4843-b2f9-c9a12dd349b3"}
+2026-03-11T06:35:48.219Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:35:48.220Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:35:48.221Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210909,"exp":1775802909,"jti":"431f9e42-0576-4843-b2f9-c9a12dd349b3"}
+2026-03-11T06:35:51.569Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:35:51.570Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:35:51.571Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210909,"exp":1775802909,"jti":"431f9e42-0576-4843-b2f9-c9a12dd349b3"}
+2026-03-11T06:35:52.343Z: JWT callback triggered. Token email: amiththomasabraham2027@cs.ajce.in. User present: false
+2026-03-11T06:35:52.345Z: Session callback triggered. Current session user: amiththomasabraham2027@cs.ajce.in
+2026-03-11T06:35:52.346Z: Session callback token: {"name":"AMITH THOMAS ABRAHAM BTCS2023-27-S1A","email":"amiththomasabraham2027@cs.ajce.in","picture":"https://lh3.googleusercontent.com/a/ACg8ocLGFWYobioO0sofgd8ZsfMCz6iEEyL09neqBVK-zLBc5vL72A=s96-c","sub":"107934143456746455725","id":"107934143456746455725","iat":1773210909,"exp":1775802909,"jti":"431f9e42-0576-4843-b2f9-c9a12dd349b3"}
+2026-03-11T06:36:14.083Z: SignIn triggered for provider: google. Email: amiththomas2005@gmail.com
+2026-03-11T06:36:14.085Z: DB Connected.
+2026-03-11T06:36:14.207Z: Existing User found? true
+2026-03-11T06:36:14.208Z: SignIn returning true.
+2026-03-11T06:36:14.211Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: true
+2026-03-11T06:36:15.887Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:15.888Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:15.888Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210974,"exp":1775802974,"jti":"6c94b394-f410-43f5-b51d-58ccd342bb67"}
+2026-03-11T06:36:16.235Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:16.236Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:16.237Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:28.565Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:28.566Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:28.567Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:28.851Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:28.854Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:28.855Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:35.279Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:35.280Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:35.282Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:36.123Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:36.124Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:36.125Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:37.556Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:37.557Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:37.558Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:37.841Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:37.842Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:37.844Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:39.692Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:39.693Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:39.695Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:40.545Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:40.546Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:40.547Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:55.212Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:55.213Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:55.215Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:36:55.671Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:36:55.673Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:36:55.675Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:38:11.119Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:38:11.121Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:38:11.122Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:38:11.863Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:38:11.865Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:38:11.866Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:39:01.034Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:39:01.038Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:39:01.040Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:39:21.040Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:39:21.042Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:39:21.044Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:39:31.063Z: ERROR in session: getaddrinfo ENOTFOUND ac-jspker8-shard-00-02.65gu6j7.mongodb.net
+2026-03-11T06:39:56.191Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:39:56.192Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:39:56.193Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:39:57.212Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:39:57.213Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:39:57.218Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:40:05.775Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:40:05.776Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:40:05.777Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773210976,"exp":1775802976,"jti":"91c68ff5-3ebc-4d5c-9b4e-3d9d992b5dd8"}
+2026-03-11T06:40:06.052Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:40:06.053Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:40:06.053Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211206,"exp":1775803206,"jti":"bd54f7b2-7996-4938-bb42-f9e2eb4b4d61"}
+2026-03-11T06:40:21.761Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:40:21.762Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:40:21.763Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211206,"exp":1775803206,"jti":"bd54f7b2-7996-4938-bb42-f9e2eb4b4d61"}
+2026-03-11T06:40:22.679Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:40:22.681Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:40:22.683Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211206,"exp":1775803206,"jti":"bd54f7b2-7996-4938-bb42-f9e2eb4b4d61"}
+2026-03-11T06:42:56.597Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:42:56.597Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:42:56.599Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211206,"exp":1775803206,"jti":"bd54f7b2-7996-4938-bb42-f9e2eb4b4d61"}
+2026-03-11T06:42:56.842Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:42:56.842Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:42:56.844Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211376,"exp":1775803376,"jti":"027161ac-7e94-4b32-9fb6-baea1e2744de"}
+2026-03-11T06:42:59.875Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:42:59.876Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:42:59.876Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211376,"exp":1775803376,"jti":"027161ac-7e94-4b32-9fb6-baea1e2744de"}
+2026-03-11T06:43:00.047Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:43:00.048Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:43:00.048Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211379,"exp":1775803379,"jti":"798045f6-0c9f-4283-abaa-5f05ffa8b988"}
+2026-03-11T06:43:02.853Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:43:02.854Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:43:02.855Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211379,"exp":1775803379,"jti":"798045f6-0c9f-4283-abaa-5f05ffa8b988"}
+2026-03-11T06:43:03.095Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:43:03.098Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:43:03.099Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211379,"exp":1775803379,"jti":"798045f6-0c9f-4283-abaa-5f05ffa8b988"}
+2026-03-11T06:44:17.662Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:44:17.664Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:44:17.665Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211379,"exp":1775803379,"jti":"798045f6-0c9f-4283-abaa-5f05ffa8b988"}
+2026-03-11T06:44:17.842Z: JWT callback triggered. Token email: amiththomas2005@gmail.com. User present: false
+2026-03-11T06:44:17.843Z: Session callback triggered. Current session user: amiththomas2005@gmail.com
+2026-03-11T06:44:17.844Z: Session callback token: {"name":"Amith Thomas","email":"amiththomas2005@gmail.com","picture":"https://lh3.googleusercontent.com/a/ACg8ocJqSnMxXY-GEEv6mrEvmV6Yn3-Sh6KE5tabF8rgaGxYXzTpe5vY=s96-c","sub":"107671912021793276422","id":"107671912021793276422","iat":1773211457,"exp":1775803457,"jti":"f01df803-f778-4e9d-b134-b032fa00326e"}

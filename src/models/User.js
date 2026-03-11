@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
+    // Optional because OAuth users (like Google) won't have a password
   },
   firstName: {
     type: String,

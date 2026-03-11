@@ -1,45 +1,133 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import BottomNavBar from '@/components/layout/BottomNavBar';
-import { CheckCircle, MapPin, Briefcase, GraduationCap, Languages, Sparkles, Coffee, Dog, ChevronLeft, Edit2, X, Plus } from 'lucide-react';
+import { CheckCircle, MapPin, Briefcase, GraduationCap, Languages, Sparkles, Coffee, Dog, ChevronLeft, Edit2, X, Plus, LogOut } from 'lucide-react';
 
 export default function Profile() {
   const router = useRouter();
+  const { data: session } = useSession();
   const [isEditing, setIsEditing] = useState(false);
   const [currentPhotoIdx, setCurrentPhotoIdx] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [imageUrlInput, setImageUrlInput] = useState('');
 
-  // Mock User Profile Data
+  // User Profile Data Map
   const [profile, setProfile] = useState({
-    name: 'Amith',
-    age: 26,
+    name: '',
+    age: 25,
     isVerified: true,
-    location: 'San Francisco, CA',
+    location: '',
     distance: '2',
-    job: 'Product Designer at TechCorp',
-    school: 'Stanford University',
-    bio: "I spend too much time thinking about typography and not enough time doing laundry. Let's grab coffee and talk about your favorite obscure documentary.",
-    interests: ['Typography', 'Coffee', 'Documentaries', 'Hiking', 'Architecture'],
-    lookingFor: 'Something casual',
-    languages: 'English, Spanish',
-    starSign: 'Leo',
-    drinks: 'Socially',
-    smokes: 'Never',
-    pets: 'Has a dog',
-    imageUrls: [
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=600&fit=crop'
-    ],
+    job: '',
+    school: '',
+    bio: '',
+    interests: [],
+    lookingFor: '',
+    languages: '',
+    starSign: '',
+    drinks: '',
+    smokes: '',
+    pets: '',
+    imageUrls: [],
+    gender: '',
   });
+
+  useEffect(() => {
+    async function fetchMyProfile() {
+      try {
+        const res = await fetch('/api/profile');
+        if (res.ok) {
+          const data = await res.json();
+          setProfile({
+            ...profile,
+            name: data.firstName || data.name?.split(' ')[0] || '',
+            bio: data.bio || '',
+            location: data.location || '',
+            job: data.job || '',
+            school: data.school || '',
+            interests: data.interests || [],
+            imageUrls: data.imageUrls?.length > 0 ? data.imageUrls : [session?.user?.image || 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop'],
+            gender: data.gender || ''
+          });
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    if (session) {
+      fetchMyProfile();
+    }
+  }, [session]);
 
   const completionPercentage = Math.round((profile.imageUrls.length / 6) * 100);
 
-  const handleSave = () => {
-    // Save to API logic here
-    setIsEditing(false);
+  const handleImageUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (file.size > 5 * 1024 * 1024) {
+      alert("Image must be smaller than 5MB");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setProfile((prev) => ({
+        ...prev,
+        imageUrls: [...prev.imageUrls, reader.result]
+      }));
+    };
+    reader.readAsDataURL(file);
   };
+
+  const handleRemoveImage = (indexToRemove) => {
+    setProfile((prev) => ({
+      ...prev,
+      imageUrls: prev.imageUrls.filter((_, idx) => idx !== indexToRemove)
+    }));
+    if (currentPhotoIdx >= indexToRemove && currentPhotoIdx > 0) {
+      setCurrentPhotoIdx(currentPhotoIdx - 1);
+    }
+  };
+
+  const handleSave = async () => {
+    setSaving(true);
+    try {
+      const res = await fetch('/api/profile', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: profile.name,
+          bio: profile.bio,
+          location: profile.location,
+          job: profile.job,
+          school: profile.school,
+          interests: profile.interests,
+          imageUrls: profile.imageUrls,
+          gender: profile.gender,
+        })
+      });
+      if (res.ok) {
+        setIsEditing(false);
+      } else {
+        console.error("Failed to save");
+      }
+    } catch (err) {
+       console.error(err);
+    } finally {
+       setSaving(false);
+    }
+  };
+
+  if (loading) {
+    return <div className="flex bg-[#F5F5F5] min-h-screen items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-[#FFC629] border-t-transparent animate-spin"/></div>;
+  }
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#F5F5F5] pb-[80px]">
@@ -50,6 +138,10 @@ export default function Profile() {
           src={profile.imageUrls[currentPhotoIdx] || 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=400&h=600&fit=crop'} 
           className="w-full h-full object-cover rounded-b-[20px]"
           alt="Profile Cover"
+          onError={(e) => {
+            e.target.onerror = null; 
+            e.target.src = 'https://placehold.co/400x600/eeeeee/999999?text=Invalid+Image';
+          }}
         />
         
         {/* Top Controls Overlay */}
@@ -62,13 +154,22 @@ export default function Profile() {
           </button>
           
           {!isEditing && (
-            <button 
-              onClick={() => setIsEditing(true)}
-              className="px-4 py-2 bg-white/95 backdrop-blur-md rounded-full flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform"
-            >
-              <Edit2 size={14} className="text-[#1A1A1A]" />
-              <span className="text-[13px] font-bold text-[#1A1A1A]">Edit</span>
-            </button>
+            <div className="flex gap-2">
+              <button 
+                onClick={() => signOut({ callbackUrl: '/splash' })}
+                className="px-4 py-2 bg-white/95 backdrop-blur-md rounded-full flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform"
+              >
+                <LogOut size={14} className="text-[#EF4444]" />
+                <span className="text-[13px] font-bold text-[#EF4444]">Log Out</span>
+              </button>
+              <button 
+                onClick={() => setIsEditing(true)}
+                className="px-4 py-2 bg-white/95 backdrop-blur-md rounded-full flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform"
+              >
+                <Edit2 size={14} className="text-[#1A1A1A]" />
+                <span className="text-[13px] font-bold text-[#1A1A1A]">Edit</span>
+              </button>
+            </div>
           )}
         </div>
 
@@ -85,21 +186,72 @@ export default function Profile() {
               onClick={() => setCurrentPhotoIdx(idx)}
               className={`relative flex-shrink-0 w-[64px] h-[84px] rounded-[8px] overflow-hidden shadow-sm transition-all ${idx === currentPhotoIdx ? 'ring-2 ring-[#FFC629] ring-offset-2 ring-offset-[#F5F5F5]' : 'opacity-80'}`}
             >
-              <img src={url} className="w-full h-full object-cover" alt={`Thumb ${idx}`} />
+              <img 
+                src={url} 
+                className="w-full h-full object-cover" 
+                alt={`Thumb ${idx}`} 
+                onError={(e) => {
+                  e.target.onerror = null; 
+                  e.target.src = 'https://placehold.co/400x600/eeeeee/999999?text=Invalid+Image';
+                }}
+              />
               {isEditing && (
-                <button className="absolute top-1 right-1 w-5 h-5 bg-white/90 rounded-full flex items-center justify-center text-[#EF4444] shadow-sm">
+                <button 
+                  onClick={(e) => { e.stopPropagation(); handleRemoveImage(idx); }}
+                  className="absolute top-1 right-1 w-5 h-5 bg-white/90 rounded-full flex items-center justify-center text-[#EF4444] shadow-sm"
+                >
                   <X size={12} strokeWidth={3} />
                 </button>
               )}
             </div>
           ))}
           {profile.imageUrls.length < 6 && (
-            <div className={`flex-shrink-0 w-[64px] h-[84px] rounded-[8px] border-2 border-dashed ${isEditing ? 'border-[#FFC629] bg-[#FFF9E6]' : 'border-[#CBD5E1] bg-white'} flex items-center justify-center text-[#9CA3AF]`}>
+            <label className={`flex-shrink-0 w-[64px] h-[84px] rounded-[8px] border-2 border-dashed ${isEditing ? 'border-[#FFC629] bg-[#FFF9E6] cursor-pointer' : 'border-[#CBD5E1] bg-white cursor-not-allowed'} flex items-center justify-center text-[#9CA3AF]`}>
               <Plus size={24} className={isEditing ? 'text-[#FFC629]' : ''} />
-            </div>
+              <input 
+                type="file" 
+                accept="image/*" 
+                className="hidden" 
+                disabled={!isEditing}
+                onChange={handleImageUpload}
+              />
+            </label>
           )}
         </div>
       </div>
+
+      {isEditing && profile.imageUrls.length < 6 && (
+        <div className="px-4 mb-4 flex flex-col gap-2">
+          <div className="flex gap-2">
+            <input 
+              type="text" 
+              placeholder="Paste direct image URL (ending in .jpg, .png)" 
+              value={imageUrlInput}
+              onChange={(e) => setImageUrlInput(e.target.value)}
+              className="flex-1 bg-white border border-[#E0E0E0] rounded-[8px] px-3 py-2 text-[14px] focus:outline-none focus:border-[#FFC629]"
+            />
+            <button 
+              onClick={() => {
+                if (imageUrlInput && imageUrlInput.startsWith('http')) {
+                  // Basic check to remind users to use direct image links
+                  if (imageUrlInput.includes('instagram.com/p/')) {
+                    alert('Please provide a direct image link (ending in .jpg or .png), not a webpage link like Instagram.');
+                    return;
+                  }
+                  setProfile(prev => ({ ...prev, imageUrls: [...prev.imageUrls, imageUrlInput] }));
+                  setImageUrlInput('');
+                } else {
+                  alert('Please enter a valid HTTP/HTTPS URL.');
+                }
+              }}
+              className="bg-[#1A1A1A] text-white px-4 py-2 rounded-[8px] text-[14px] font-medium active:scale-95 transition-transform"
+            >
+              Add
+            </button>
+          </div>
+          <p className="text-[11px] text-[#9CA3AF] px-1">Note: Some websites like Instagram block direct image linking. Try using Imgur, Unsplash, or uploading from your device!</p>
+        </div>
+      )}
 
       {/* Profile Completion */}
       <div className="px-6 mb-6">
@@ -135,19 +287,51 @@ export default function Profile() {
             <span className="text-[15px] text-[#6B7280] whitespace-nowrap">{profile.distance} km away</span>
           </div>
           
-          {profile.job && (
-            <div className="flex items-center gap-1.5 opacity-90">
+          {isEditing ? (
+            <div className="flex items-center gap-1.5 w-full mt-2">
+               <span className="text-[#9CA3AF] flex-shrink-0 text-[16px] font-bold">👤</span>
+               <select 
+                 value={profile.gender || ''} 
+                 onChange={e=>setProfile({...profile, gender: e.target.value})}
+                 className="w-full text-[15px] border-b border-[#E0E0E0] focus:outline-none focus:border-[#FFC629] bg-transparent pb-1"
+               >
+                 <option value="" disabled>Select Gender</option>
+                 <option value="Woman">Woman</option>
+                 <option value="Man">Man</option>
+                 <option value="Non-binary">Non-binary</option>
+                 <option value="Other">Other</option>
+               </select>
+            </div>
+          ) : profile.gender ? (
+            <div className="flex items-center gap-1.5 opacity-90 mt-2">
+              <span className="text-[#9CA3AF] flex-shrink-0 text-[14px]">👤</span>
+              <span className="text-[15px] text-[#1A1A1A] truncate">{profile.gender}</span>
+            </div>
+          ) : null}
+          
+          {isEditing ? (
+            <div className="flex items-center gap-1.5 w-full mt-2">
+               <Briefcase size={16} strokeWidth={2.5} className="text-[#9CA3AF] flex-shrink-0" />
+               <input type="text" placeholder="Add Job Title" value={profile.job || ''} className="w-full text-[15px] border-b border-[#E0E0E0] focus:outline-none focus:border-[#FFC629]" onChange={e=>setProfile({...profile, job: e.target.value})} />
+            </div>
+          ) : profile.job ? (
+            <div className="flex items-center gap-1.5 opacity-90 mt-2">
               <Briefcase size={16} strokeWidth={2.5} className="text-[#9CA3AF] flex-shrink-0" />
               <span className="text-[15px] text-[#1A1A1A] truncate">{profile.job}</span>
             </div>
-          )}
+          ) : null}
 
-          {profile.school && (
-            <div className="flex items-center gap-1.5 opacity-90">
+          {isEditing ? (
+            <div className="flex items-center gap-1.5 w-full mt-2">
+               <GraduationCap size={16} strokeWidth={2.5} className="text-[#9CA3AF] flex-shrink-0" />
+               <input type="text" placeholder="Add School" value={profile.school || ''} className="w-full text-[15px] border-b border-[#E0E0E0] focus:outline-none focus:border-[#FFC629]" onChange={e=>setProfile({...profile, school: e.target.value})} />
+            </div>
+          ) : profile.school ? (
+            <div className="flex items-center gap-1.5 opacity-90 mt-2">
               <GraduationCap size={16} strokeWidth={2.5} className="text-[#9CA3AF] flex-shrink-0" />
               <span className="text-[15px] text-[#1A1A1A] truncate">{profile.school}</span>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
 

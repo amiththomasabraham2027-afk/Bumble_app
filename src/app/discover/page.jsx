@@ -1,53 +1,38 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
 import SwipeDeck from '@/components/SwipeDeck';
 import TopBar from '@/components/layout/TopBar';
 import BottomNavBar from '@/components/layout/BottomNavBar';
 import { Search } from 'lucide-react';
 
 export default function Discover() {
+  const { data: session } = useSession();
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // For MV redesign, we'll use placeholder mock data matching the new schema
-    const mockProfiles = [
-      {
-        _id: '1',
-        name: 'Sarah',
-        age: 26,
-        bio: 'Love hiking and good coffee. Looking for someone to explore the city with.',
-        imageUrls: ['https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop'],
-        location: 'New York, NY',
-        interests: ['Hiking', 'Coffee', 'Photography'],
-        isVerified: true,
-      },
-      {
-        _id: '2',
-        name: 'Alex',
-        age: 28,
-        bio: 'Photographer and dog lover. Let\'s grab a drink.',
-        imageUrls: ['https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=400&h=500&fit=crop'],
-        location: 'Brooklyn, NY',
-        interests: ['Dogs', 'Art', 'Breweries'],
-        isVerified: false,
-      },
-      {
-        _id: '3',
-        name: 'Emma',
-        age: 24,
-        bio: 'Just moved here! Show me your favorite spots.',
-        imageUrls: ['https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=500&fit=crop', 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=500&fit=crop'],
-        location: 'Jersey City, NJ',
-        interests: ['Foodie', 'Travel', 'Baking', 'Museums'],
-        isVerified: true,
-      },
-    ];
+    async function fetchProfiles() {
+      try {
+        const res = await fetch('/api/users');
+        if (res.ok) {
+          const data = await res.json();
+          setProfiles(data);
+        } else {
+          console.error("Failed to fetch profiles");
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-    setProfiles(mockProfiles);
-    setLoading(false);
-  }, []);
+    if (session) {
+      fetchProfiles();
+    }
+  }, [session]);
 
   const handleSwipe = async (profileId, direction) => {
     // direction is 'left' or 'right'
@@ -63,7 +48,15 @@ export default function Discover() {
         {loading ? (
           <div className="w-12 h-12 border-4 border-[#FFC629] border-t-transparent rounded-full animate-spin" />
         ) : profiles.length > 0 ? (
-          <SwipeDeck profiles={profiles} onSwipe={handleSwipe} />
+          <SwipeDeck 
+            profiles={profiles} 
+            onSwipe={handleSwipe} 
+            currentUser={{ 
+              name: session?.user?.name?.split(' ')[0] || 'User', 
+              gender: session?.user?.dbProfile?.gender || 'unspecified', 
+              imageUrl: session?.user?.image || 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop' 
+            }} 
+          />
         ) : (
           <div className="flex flex-col items-center justify-center h-full text-center px-6">
             <div className="w-[80px] h-[80px] bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">

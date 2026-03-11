@@ -1,21 +1,43 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, useMotionValue, useTransform, useAnimation } from 'framer-motion';
-import { Heart, X, RotateCcw, Zap, Star, MapPin, CheckCircle } from 'lucide-react';
+import { motion, useMotionValue, useTransform, useAnimation, AnimatePresence } from 'framer-motion';
+import { Heart, X, RotateCcw, Zap, Star, MapPin, CheckCircle, MessageCircle } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
-export default function SwipeDeck({ profiles, onSwipe }) {
+export default function SwipeDeck({ profiles, onSwipe, currentUser }) {
+  const router = useRouter();
   const [cards, setCards] = useState(profiles);
   const [undoHistory, setUndoHistory] = useState([]);
+  const [currentMatch, setCurrentMatch] = useState(null);
 
   const handleSwipeComplete = (id, direction) => {
     onSwipe(id, direction);
     
+    // If user swiped LEFT (Liked), check if genders are opposite to trigger a match
+    if (direction === 'left') {
+      const swipedCard = cards.find(card => card._id === id);
+      
+      // Match if they have defined genders and they are different
+      if (swipedCard?.gender && currentUser?.gender && swipedCard.gender !== currentUser.gender) {
+        setCurrentMatch(swipedCard);
+        // Don't remove card from deck immediately if matched, so background stays the same
+        return;
+      }
+    }
+
     setCards((prev) => {
       const swipedCard = prev.find(card => card._id === id);
       setUndoHistory(history => [...history, swipedCard].slice(-1)); // Keep only 1 undo
       return prev.filter(card => card._id !== id);
     });
+  };
+
+  const closeMatch = () => {
+    if (currentMatch) {
+      setCards((prev) => prev.filter(card => card._id !== currentMatch._id));
+      setCurrentMatch(null);
+    }
   };
 
   const undoLastSwipe = () => {
@@ -39,7 +61,7 @@ export default function SwipeDeck({ profiles, onSwipe }) {
       </div>
       
       {/* SWIPE ACTION BUTTONS */}
-      {cards.length > 0 && (
+      {cards.length > 0 && !currentMatch && (
         <div className="absolute bottom-6 w-full flex justify-center items-center gap-3 z-50">
           <button 
             onClick={undoLastSwipe}
@@ -75,6 +97,80 @@ export default function SwipeDeck({ profiles, onSwipe }) {
           </button>
         </div>
       )}
+
+      {/* IT'S A MATCH OVERLAY */}
+      <AnimatePresence>
+        {currentMatch && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 z-[100] flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm px-6 pb-20 pt-10"
+          >
+            <div className="flex-1 flex flex-col items-center justify-center w-full max-w-[320px]">
+              <motion.h2 
+                initial={{ scale: 0.5, opacity: 0, y: -20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
+                className="font-display font-bold text-[40px] text-[#FFC629] mb-2 tracking-tight drop-shadow-lg italic text-center"
+              >
+                It's a Match!
+              </motion.h2>
+              
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="text-white/80 text-[15px] mb-8 text-center"
+              >
+                You and {currentMatch.name} have liked each other.
+              </motion.p>
+
+              <div className="flex items-center justify-center gap-4 mb-12">
+                <motion.div 
+                  initial={{ x: -50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.4 }}
+                  className="w-24 h-24 rounded-full border-4 border-[#FFC629] overflow-hidden shadow-[0_0_20px_rgba(255,198,41,0.5)] z-10"
+                >
+                  <img src={currentUser?.imageUrl || "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop"} alt="You" className="w-full h-full object-cover" />
+                </motion.div>
+                
+                <motion.div 
+                  initial={{ x: 50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.5 }}
+                  className="w-24 h-24 rounded-full border-4 border-white overflow-hidden shadow-xl -ml-6 z-0"
+                >
+                  <img src={currentMatch.imageUrls[0]} alt={currentMatch.name} className="w-full h-full object-cover" />
+                </motion.div>
+              </div>
+
+              <motion.div 
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.7 }}
+                className="w-full space-y-3"
+              >
+                <button 
+                  onClick={() => router.push(`/matches/${currentMatch._id}`)}
+                  className="w-full py-3.5 bg-[#FFC629] text-[#1A1A1A] rounded-full font-bold text-[16px] flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(255,198,41,0.4)] hover:scale-[1.02] transition-transform"
+                >
+                  <MessageCircle size={20} className="fill-[#1A1A1A] border-none" />
+                  Message {currentMatch.name}
+                </button>
+                
+                <button 
+                  onClick={closeMatch}
+                  className="w-full py-3.5 bg-transparent border-2 border-white/30 text-white rounded-full font-bold text-[16px] hover:bg-white/10 transition-colors"
+                >
+                  Keep Swiping
+                </button>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
