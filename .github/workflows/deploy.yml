@@ -101,14 +101,13 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          envs: IMAGE
           script: |
-            IMAGE="${{ needs.build-and-push.outputs.image }}"
+            IMAGE="${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPO }}:${{ github.sha }}"
 
             # ── authenticate Docker with ECR ─────
             aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | \
               docker login --username AWS --password-stdin \
-              $(echo "$IMAGE" | cut -d/ -f1)
+              ${{ secrets.ECR_REGISTRY }}
 
             # ── pull new image ───────────────────
             docker pull "$IMAGE"
