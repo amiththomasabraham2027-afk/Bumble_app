@@ -18,12 +18,11 @@ export async function GET() {
        return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
-    // Users to exclude: current user + already swiped (liked or passed)
+    // Users to exclude: current user + users already swiped on (liked or passed)
     const excludeIds = [
       currentUser._id,
-      ...(currentUser.likedBy || []),
+      ...(currentUser.liked || []),
       ...(currentUser.passed || []),
-      ...(currentUser.matches || []) // Already matched users
     ];
 
     // Build the query — show all users except self and already-swiped

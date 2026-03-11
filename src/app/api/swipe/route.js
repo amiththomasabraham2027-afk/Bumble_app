@@ -32,14 +32,16 @@ export async function POST(request) {
     if (direction === 'right') {
       // Pass
       await User.findByIdAndUpdate(currentUser._id, {
-        $addToSet: { passed: targetUser._id } // Add to passed array
+        $addToSet: { passed: targetUser._id }
       });
       return NextResponse.json({ message: 'Passed', match: false });
     } 
     
     if (direction === 'left') {
-      // Like
-      // Add currentUser to targetUser's likedBy array
+      // Like — track in both directions
+      await User.findByIdAndUpdate(currentUser._id, {
+        $addToSet: { liked: targetUser._id }
+      });
       await User.findByIdAndUpdate(targetUser._id, {
         $addToSet: { likedBy: currentUser._id }
       });

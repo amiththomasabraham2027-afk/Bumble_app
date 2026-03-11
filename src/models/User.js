@@ -75,6 +75,10 @@ const UserSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Match',
   }],
+  liked: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  }],
   likedBy: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
