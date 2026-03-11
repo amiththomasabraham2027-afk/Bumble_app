@@ -4,12 +4,15 @@ import User from '@/models/User';
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../auth/[...nextauth]/route";
 
-export async function GET() {
+export async function GET(request) {
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
+
+    const { searchParams } = new URL(request.url);
+    const filter = searchParams.get('filter') || 'new';
 
     await connectToDatabase();
     
@@ -18,14 +21,15 @@ export async function GET() {
        return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
-    // Users to exclude: current user + users already swiped on (liked or passed)
-    const excludeIds = [
-      currentUser._id,
-      ...(currentUser.liked || []),
-      ...(currentUser.passed || []),
-    ];
+    // 'everyone' = all users except self; 'new' = only unswiped users
+    const excludeIds = filter === 'everyone'
+      ? [currentUser._id]
+      : [
+          currentUser._id,
+          ...(currentUser.liked || []),
+          ...(currentUser.passed || []),
+        ];
 
-    // Build the query — show all users except self and already-swiped
     const query = {
       _id: { $nin: excludeIds },
       isActive: { $ne: false },

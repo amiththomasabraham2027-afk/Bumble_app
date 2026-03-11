@@ -11,11 +11,13 @@ export default function Discover() {
   const { data: session } = useSession();
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState('new'); // 'everyone' | 'new'
 
   useEffect(() => {
     async function fetchProfiles() {
+      setLoading(true);
       try {
-        const res = await fetch('/api/users');
+        const res = await fetch(`/api/users?filter=${filter}`);
         if (res.ok) {
           const data = await res.json();
           setProfiles(data);
@@ -32,7 +34,7 @@ export default function Discover() {
     if (session) {
       fetchProfiles();
     }
-  }, [session]);
+  }, [session, filter]);
 
   const handleSwipe = async (profileId, direction) => {
     // direction is 'left' or 'right'
@@ -56,6 +58,30 @@ export default function Discover() {
   return (
     <div className="flex flex-col h-[100dvh] bg-[#F5F5F5] overflow-hidden">
       <TopBar variant="logo-center" />
+
+      {/* Filter toggle */}
+      <div className="flex gap-2 px-4 pt-3 pb-1 bg-[#F5F5F5]">
+        <button
+          onClick={() => setFilter('everyone')}
+          className={`flex-1 py-2 rounded-full text-[13px] font-bold transition-colors ${
+            filter === 'everyone'
+              ? 'bg-[#1A1A1A] text-white'
+              : 'bg-white text-[#1A1A1A] border border-[#E0E0E0]'
+          }`}
+        >
+          Everyone
+        </button>
+        <button
+          onClick={() => setFilter('new')}
+          className={`flex-1 py-2 rounded-full text-[13px] font-bold transition-colors ${
+            filter === 'new'
+              ? 'bg-[#1A1A1A] text-white'
+              : 'bg-white text-[#1A1A1A] border border-[#E0E0E0]'
+          }`}
+        >
+          New for you
+        </button>
+      </div>
 
       <main className="flex-1 relative flex flex-col items-center justify-center pt-4 pb-4 overflow-hidden px-4">
         {loading ? (
