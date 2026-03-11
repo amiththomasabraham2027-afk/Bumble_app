@@ -2,17 +2,13 @@ import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/db';
 import User from '@/models/User';
 import Match from '@/models/Match';
-import { verifyToken } from '@/lib/auth';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '../auth/[...nextauth]/route';
 
 export async function POST(request) {
   try {
-    const token = request.cookies.get('token')?.value;
-    if (!token) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const payload = await verifyToken(token);
-    if (!payload) {
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
@@ -24,7 +20,7 @@ export async function POST(request) {
 
     await connectToDatabase();
     
-    const currentUser = await User.findById(payload.userId);
+    const currentUser = await User.findOne({ email: session.user.email });
     const targetUser = await User.findById(targetUserId);
 
     if (!currentUser || !targetUser) {

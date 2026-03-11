@@ -37,7 +37,20 @@ export default function Discover() {
   const handleSwipe = async (profileId, direction) => {
     // direction is 'left' or 'right'
     // REVERSE MECHANICS: Left = Like, Right = Pass
-    console.log(`Swiped ${direction} on ${profileId}`);
+    try {
+      const res = await fetch('/api/swipe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ targetUserId: profileId, direction }),
+      });
+      const data = await res.json();
+      if (data.match && data.matchData) {
+        // Return match info so SwipeDeck can show overlay
+        return data;
+      }
+    } catch (err) {
+      console.error('Swipe error:', err);
+    }
   };
 
   return (

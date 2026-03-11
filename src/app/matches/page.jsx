@@ -1,52 +1,55 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import TopBar from '@/components/layout/TopBar';
 import BottomNavBar from '@/components/layout/BottomNavBar';
 import { Heart } from 'lucide-react';
 
 export default function Matches() {
+  const { data: session } = useSession();
   const [activeTab, setActiveTab] = useState('matches');
+  const [matches, setMatches] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Mock data for Matches Tab
-  const newMatches = [
-    { id: '1', name: 'Sarah', imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop', isOnline: true },
-    { id: '2', name: 'Emma', imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop', isOnline: false, unread: true },
-    { id: '3', name: 'Chloe', imageUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop', isOnline: true },
-    { id: '4', name: 'Mia', imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop', isOnline: false },
-  ];
-
-  const conversations = [
-    { 
-      id: 'chat1', 
-      user: { name: 'Alex', imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=100&h=100&fit=crop', isOnline: true },
-      lastMessage: 'That sounds like fun! What time?',
-      timestamp: '2m',
-      unreadCount: 1,
-      initiationPending: false
-    },
-    { 
-      id: 'chat2', 
-      user: { name: 'Jessica', imageUrl: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop', isOnline: false },
-      lastMessage: 'You matched with Jessica',
-      timestamp: '1h',
-      unreadCount: 0,
-      initiationPending: true,
-      timeLeft: '18h left'
-    },
-    { 
-      id: 'chat3', 
-      user: { name: 'David', imageUrl: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop', isOnline: false },
-      lastMessage: 'Haha absolutely not 🤣',
-      timestamp: 'Yesterday',
-      unreadCount: 0,
-      initiationPending: false
+  useEffect(() => {
+    async function fetchMatches() {
+      try {
+        const res = await fetch('/api/matches');
+        if (res.ok) {
+          const data = await res.json();
+          setMatches(data.matches || []);
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
     }
-  ];
+    if (session) fetchMatches();
+  }, [session]);
 
-  // Mock data for Beeline Tab
-  const beelineCount = 12;
+  // Split matches into new (no messages) and conversations (has messages)
+  const newMatches = matches.filter(m => !m.messages || m.messages.length === 0);
+  const conversations = matches.filter(m => m.messages && m.messages.length > 0);
+
+  const getOtherUser = (match) => {
+    return match.users?.find(u => u.email !== session?.user?.email) || match.users?.[0];
+  };
+
+  const formatTime = (dateStr) => {
+    if (!dateStr) return '';
+    const d = new Date(dateStr);
+    const now = new Date();
+    const diffMs = now - d;
+    const diffMins = Math.floor(diffMs / 60000);
+    if (diffMins < 1) return 'Now';
+    if (diffMins < 60) return `${diffMins}m`;
+    const diffHours = Math.floor(diffMins / 60);
+    if (diffHours < 24) return `${diffHours}h`;
+    return `${Math.floor(diffHours / 24)}d`;
+  };
 
   return (
     <div className="flex flex-col h-[100dvh] bg-white">
@@ -72,39 +75,71 @@ export default function Matches() {
 
       <main className="flex-1 overflow-y-auto pb-[80px]">
         {activeTab === 'matches' ? (
+          loading ? (
+            <div className="flex items-center justify-center pt-20">
+              <div className="w-8 h-8 border-4 border-[#FFC629] border-t-transparent rounded-full animate-spin" />
+            </div>
+          ) : matches.length === 0 ? (
+            <EmptyState />
+          ) : (
           <>
             {/* New Matches Horizontal List */}
             {newMatches.length > 0 && (
               <div className="mb-6">
                 <h2 className="px-4 text-[15px] font-bold text-[#1A1A1A] mb-3">New Matches</h2>
                 <div className="flex gap-4 overflow-x-auto px-4 pb-2 snap-x hide-scrollbar">
-                  {newMatches.map(match => (
-                    <Link key={match.id} href={`/matches/${match.id}`} className="snap-start flex flex-col items-center gap-1 min-w-[72px]">
-                      <div className={`relative w-[72px] h-[72px] rounded-full p-[2px] ${match.unread ? 'bg-[#FFC629]' : 'bg-transparent'}`}>
-                        <img src={match.imageUrl} className="w-full h-full rounded-full object-cover border-2 border-white" alt={match.name} />
-                        {match.isOnline && (
-                          <div className="absolute bottom-1 right-1 w-3.5 h-3.5 bg-[#22C55E] border-2 border-white rounded-full z-10" />
-                        )}
+                  {newMatches.map(match => {
+                    const other = getOtherUser(match);
+                    return (
+                    <Link key={match._id} href={`/chat/${match._id}`} className="snap-start flex flex-col items-center gap-1 min-w-[72px]">
+                      <div className="relative w-[72px] h-[72px] rounded-full p-[2px] bg-[#FFC629]">
+                        <img src={other?.imageUrls?.[0] || 'https://placehold.co/100x100/eeeeee/999999?text=User'} className="w-full h-full rounded-full object-cover border-2 border-white" alt={other?.firstName || 'Match'} />
                       </div>
-                      <span className="text-[11px] font-medium text-[#1A1A1A] truncate w-full text-center">{match.name}</span>
+                      <span className="text-[11px] font-medium text-[#1A1A1A] truncate w-full text-center">{other?.firstName || other?.name?.split(' ')[0] || 'Match'}</span>
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}
 
-            {/* Call to action for chat tab */}
-            <div className="px-4 mt-8 flex flex-col items-center justify-center text-center">
-              <div className="w-16 h-16 bg-[#FFF9E6] rounded-full flex items-center justify-center mb-4">
-                <Heart className="text-[#FFC629]" size={32} />
+            {/* Conversations with messages */}
+            {conversations.length > 0 && (
+              <div className="px-4">
+                <h2 className="text-[15px] font-bold text-[#1A1A1A] mb-3">Conversations</h2>
+                {conversations.map(match => {
+                  const other = getOtherUser(match);
+                  const lastMsg = match.messages[match.messages.length - 1];
+                  return (
+                    <Link key={match._id} href={`/chat/${match._id}`} className="flex items-center gap-3 py-3 border-b border-[#F0F0F0] active:bg-[#F5F5F5] transition-colors rounded-lg -mx-2 px-2">
+                      <div className="relative w-[56px] h-[56px] flex-shrink-0">
+                        <img src={other?.imageUrls?.[0] || 'https://placehold.co/100x100/eeeeee/999999?text=User'} className="w-full h-full rounded-full object-cover" alt={other?.firstName || 'Match'} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex justify-between items-baseline mb-0.5">
+                          <span className="text-[15px] font-semibold text-[#1A1A1A] truncate">{other?.firstName || other?.name?.split(' ')[0] || 'Match'}</span>
+                          <span className="text-[11px] text-[#9CA3AF] flex-shrink-0 ml-2">{formatTime(lastMsg?.createdAt || match.updatedAt)}</span>
+                        </div>
+                        <p className="text-[13px] text-[#6B7280] truncate">{lastMsg?.text || 'Start a conversation!'}</p>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
-              <h2 className="text-[20px] font-bold text-[#1A1A1A] mb-1">Your Matches</h2>
-              <p className="text-[15px] text-[#9CA3AF] mb-6">Head over to the Chat tab to start a conversation!</p>
-              <Link href="/chat" className="px-6 py-2.5 rounded-full bg-[#FFC629] text-[#1A1A1A] font-bold text-[15px] hover:bg-[#FFD966] transition-colors">
-                View Conversations
-              </Link>
-            </div>
+            )}
+
+            {/* CTA when only new matches exist */}
+            {conversations.length === 0 && (
+              <div className="px-4 mt-8 flex flex-col items-center justify-center text-center">
+                <div className="w-16 h-16 bg-[#FFF9E6] rounded-full flex items-center justify-center mb-4">
+                  <Heart className="text-[#FFC629]" size={32} />
+                </div>
+                <h2 className="text-[20px] font-bold text-[#1A1A1A] mb-1">Your Matches</h2>
+                <p className="text-[15px] text-[#9CA3AF] mb-6">Tap a match above to start chatting!</p>
+              </div>
+            )}
           </>
+          )
         ) : (
           /* Beeline Tab Content */
           <div className="px-4 pt-4">

@@ -1,25 +1,27 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/db';
+import User from '@/models/User';
 import Match from '@/models/Match';
-import { verifyToken } from '@/lib/auth';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '../../../auth/[...nextauth]/route';
 
 export async function GET(request, { params }) {
   try {
-    const token = request.cookies.get('token')?.value;
-    if (!token) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.email) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const payload = await verifyToken(token);
-    if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-
-    const { matchId } = params;
+    const { matchId } = await params;
     await connectToDatabase();
 
-    const match = await Match.findById(matchId).populate('users', 'name imageUrls');
-    if (!match || !match.users.some(u => u._id.toString() === payload.userId)) {
+    const currentUser = await User.findOne({ email: session.user.email });
+    if (!currentUser) return NextResponse.json({ error: 'User not found' }, { status: 404 });
+
+    const match = await Match.findById(matchId).populate('users', 'firstName name imageUrls email');
+    if (!match || !match.users.some(u => u._id.toString() === currentUser._id.toString())) {
       return NextResponse.json({ error: 'Match not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ match });
+    return NextResponse.json({ match, currentUserId: currentUser._id.toString() });
 
   } catch (error) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
@@ -28,13 +30,10 @@ export async function GET(request, { params }) {
 
 export async function POST(request, { params }) {
   try {
-    const token = request.cookies.get('token')?.value;
-    if (!token) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.email) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const payload = await verifyToken(token);
-    if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-
-    const { matchId } = params;
+    const { matchId } = await params;
     const { text } = await request.json();
 
     if (!text?.trim()) {
@@ -43,29 +42,19 @@ export async function POST(request, { params }) {
 
     await connectToDatabase();
 
+    const currentUser = await User.findOne({ email: session.user.email });
+    if (!currentUser) return NextResponse.json({ error: 'User not found' }, { status: 404 });
+
     const match = await Match.findById(matchId);
-    if (!match || !match.users.includes(payload.userId)) {
+    if (!match || !match.users.some(id => id.toString() === currentUser._id.toString())) {
       return NextResponse.json({ error: 'Match not found' }, { status: 404 });
     }
 
-    // Check Bumble-style gating (initiator must message first within 24hr)
-    // If messages length is 0, the sender MUST be the initiator.
-    if (match.messages.length === 0) {
-      if (match.initiator.toString() !== payload.userId) {
-        return NextResponse.json({ error: 'The initiator must send the first message.' }, { status: 403 });
-      }
-      
-      // Check expiry
-      if (new Date() > match.expiresAt) {
-        return NextResponse.json({ error: 'Match has expired' }, { status: 403 });
-      }
-    }
-
     // Determine receiver
-    const receiverId = match.users.find(id => id.toString() !== payload.userId);
+    const receiverId = match.users.find(id => id.toString() !== currentUser._id.toString());
 
     const newMessage = {
-      sender: payload.userId,
+      sender: currentUser._id,
       receiver: receiverId,
       text: text.trim(),
       read: false,

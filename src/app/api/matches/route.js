@@ -2,25 +2,26 @@ import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/db';
 import User from '@/models/User';
 import Match from '@/models/Match';
-import { verifyToken } from '@/lib/auth';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '../auth/[...nextauth]/route';
 
-export async function GET(request) {
+export async function GET() {
   try {
-    const token = request.cookies.get('token')?.value;
-    if (!token) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const payload = await verifyToken(token);
-    if (!payload) {
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     await connectToDatabase();
-    
+
+    const currentUser = await User.findOne({ email: session.user.email });
+    if (!currentUser) {
+      return NextResponse.json({ error: 'User not found' }, { status: 404 });
+    }
+
     // Find matches where the user is a participant
-    const matches = await Match.find({ users: payload.userId })
-      .populate('users', 'name imageUrls')
+    const matches = await Match.find({ users: currentUser._id })
+      .populate('users', 'firstName name imageUrls email')
       .sort({ updatedAt: -1 });
 
     return NextResponse.json({ matches });

@@ -10,25 +10,22 @@ export default function SwipeDeck({ profiles, onSwipe, currentUser }) {
   const [cards, setCards] = useState(profiles);
   const [undoHistory, setUndoHistory] = useState([]);
   const [currentMatch, setCurrentMatch] = useState(null);
+  const [matchId, setMatchId] = useState(null);
 
-  const handleSwipeComplete = (id, direction) => {
-    onSwipe(id, direction);
+  const handleSwipeComplete = async (id, direction) => {
+    const result = await onSwipe(id, direction);
     
-    // If user swiped LEFT (Liked), check if genders are opposite to trigger a match
-    if (direction === 'left') {
+    // If the API returned a match
+    if (result?.match && result?.matchData) {
       const swipedCard = cards.find(card => card._id === id);
-      
-      // Match if they have defined genders and they are different
-      if (swipedCard?.gender && currentUser?.gender && swipedCard.gender !== currentUser.gender) {
-        setCurrentMatch(swipedCard);
-        // Don't remove card from deck immediately if matched, so background stays the same
-        return;
-      }
+      setCurrentMatch(swipedCard);
+      setMatchId(result.matchData._id);
+      return;
     }
 
     setCards((prev) => {
       const swipedCard = prev.find(card => card._id === id);
-      setUndoHistory(history => [...history, swipedCard].slice(-1)); // Keep only 1 undo
+      setUndoHistory(history => [...history, swipedCard].slice(-1));
       return prev.filter(card => card._id !== id);
     });
   };
@@ -37,6 +34,7 @@ export default function SwipeDeck({ profiles, onSwipe, currentUser }) {
     if (currentMatch) {
       setCards((prev) => prev.filter(card => card._id !== currentMatch._id));
       setCurrentMatch(null);
+      setMatchId(null);
     }
   };
 
@@ -153,7 +151,7 @@ export default function SwipeDeck({ profiles, onSwipe, currentUser }) {
                 className="w-full space-y-3"
               >
                 <button 
-                  onClick={() => router.push(`/matches/${currentMatch._id}`)}
+                  onClick={() => router.push(`/chat/${matchId}`)}
                   className="w-full py-3.5 bg-[#FFC629] text-[#1A1A1A] rounded-full font-bold text-[16px] flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(255,198,41,0.4)] hover:scale-[1.02] transition-transform"
                 >
                   <MessageCircle size={20} className="fill-[#1A1A1A] border-none" />
